@@ -15,7 +15,7 @@ class Login extends BaseController
   }
   public function index(): string
   {
-    return view('login/index');
+    return view('login');
   }
 
   public function login()
@@ -26,15 +26,17 @@ class Login extends BaseController
 
     foreach ($users as $user) {
       if ($user['username'] === $username && $user['password'] === $password) {
-        if ($user['role'] == 3) {
-          header('Location: /user/dashboard');
-          exit;
-        } else if ($user['role'] == 2) {
-          header('Location: /admin/dashboard');
-          exit;
-        } else if ($user['role'] == 1) {
-          header('Location: /validator/dashboard');
-          exit;
+        switch ($user['role']) {
+          case 1:
+            $this->session->set("user", $user['role']);
+            header('Location: /dashboard');
+            exit;
+            break;
+          case 2:
+            $this->session->set("user", $user['role']);
+            header('Location: /dashboard');
+            exit;
+            break;
         }
       } else {
         echo "<script>

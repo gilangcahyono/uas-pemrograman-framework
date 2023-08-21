@@ -17,7 +17,7 @@
       <!-- Sidebar scroll-->
       <div>
         <div class="brand-logo d-flex align-items-center justify-content-between">
-          <a href="/user/dashboard" class="text-nowrap logo-img">
+          <a href="/dashboard" class="text-nowrap logo-img">
             <img src="../assets/images/logos/logo-unitomo.png" width="50" alt="" />
           </a>
           <div class="close-btn d-xl-none d-block sidebartoggler cursor-pointer" id="sidebarCollapse">
@@ -32,7 +32,7 @@
               <span class="hide-menu">Home</span>
             </li>
             <li class="sidebar-item">
-              <a class="sidebar-link" href="/user/dashboard" aria-expanded="false">
+              <a class="sidebar-link" href="/dashboard" aria-expanded="false">
                 <span>
                   <i class="ti ti-layout-dashboard"></i>
                 </span>
@@ -44,7 +44,7 @@
               <span class="hide-menu">Program Kerja</span>
             </li>
             <li class="sidebar-item">
-              <a class="sidebar-link" href="/user/pengajuan_proker" aria-expanded="false">
+              <a class="sidebar-link" href="/pengajuan-proker" aria-expanded="false">
                 <span>
                   <i class="ti ti-article"></i>
                 </span>
@@ -106,18 +106,47 @@
       </header>
       <!--  Header End -->
       <div class="container-fluid">
-        <div class="row">
-          <div class="col-lg-12 d-flex align-items-stretch">
-            <div class="card w-100">
-              <div class="card-body p-4">
-                <h5 class="card-title fw-semibold mb-4">
-                  Pengajuan Anggaran Program Kerja
-                </h5>
-                <div class="alert alert-success" role="alert">
-                  Program Seminar UI/UX Telah Berhasil di Validasi
-                </div>
-                <div class="alert alert-danger" role="alert">
-                  Program Rapat Kerja Audit Belum di Validasi
+        <div class="container-fluid">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title fw-semibold mb-4">
+                Form Pengajuan Program Kerja
+              </h5>
+              <div class="card">
+                <div class="card-body">
+                  <form action="/proker" method="post">
+                    <div class="mb-3">
+                      <label for="namaProker" class="form-label">Nama Kegiatan Program Kerja</label>
+                      <input type="text" class="form-control" id="namaProker" name="namaProker" />
+                    </div>
+                    <div class="mb-3">
+                      <label for="tujuanProker" class="form-label">Tujuan Program Kerja</label>
+                      <textarea class="form-control" id="tujuanProker" name="tujuanProker" rows="3"></textarea>
+                    </div>
+                    <div class="mb-3">
+                      <label for="targetJumlah" class="form-label">Target Program Kerja</label>
+                      <input type="number" class="form-control" id="targetJumlah" name="targetJumlah" />
+                    </div>
+                    <div class="mb-3">
+                      <label for="namaPenanggungJawab" class="form-label">Nama Penanggung Jawab</label>
+                      <input type="text" class="form-control" id="namaPenanggungJawab" name="namaPenanggungJawab" />
+                    </div>
+                    <div class="mb-3">
+                      <label for="emailPenanggungJawab" class="form-label">Email Penanggung Jawab</label>
+                      <input type="email" class="form-control" id="emailPenanggungJawab" />
+                    </div>
+                    <div class="mb-3">
+                      <label for="tlpPenanggungJawab" class="form-label">No. Telepon Penangung Jawab</label>
+                      <input type="tel" class="form-control" id="tlpPenanggungJawab" name="tlpPenanggungJawab" />
+                    </div>
+                    <div class="mb-3">
+                      <label for="anggaran" class="form-label">Anggaran yang Akan Di ajukan</label>
+                      <input type="number" class="form-control" id="anggaran" name="anggaran" />
+                    </div>
+                    <button type="submit" class="btn btn-primary">
+                      Submit
+                    </button>
+                  </form>
                 </div>
               </div>
             </div>
@@ -125,13 +154,12 @@
         </div>
       </div>
     </div>
-    <script src="../assets/libs/jquery/dist/jquery.min.js"></script>
-    <script src="../assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="../assets/js/sidebarmenu.js"></script>
-    <script src="../assets/js/app.min.js"></script>
-    <script src="../assets/libs/apexcharts/dist/apexcharts.min.js"></script>
-    <script src="../assets/libs/simplebar/dist/simplebar.js"></script>
-    <script src="../assets/js/dashboard.js"></script>
+  </div>
+  <script src="../assets/libs/jquery/dist/jquery.min.js"></script>
+  <script src="../assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/js/sidebarmenu.js"></script>
+  <script src="../assets/js/app.min.js"></script>
+  <script src="../assets/libs/simplebar/dist/simplebar.js"></script>
 </body>
 
 </html>

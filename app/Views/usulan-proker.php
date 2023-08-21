@@ -17,7 +17,7 @@
       <!-- Sidebar scroll-->
       <div>
         <div class="brand-logo d-flex align-items-center justify-content-between">
-          <a href="/user/dashboard" class="text-nowrap logo-img">
+          <a href="/dashboard" class="text-nowrap logo-img">
             <img src="../assets/images/logos/logo-unitomo.png" width="50" alt="" />
           </a>
           <div class="close-btn d-xl-none d-block sidebartoggler cursor-pointer" id="sidebarCollapse">
@@ -32,7 +32,7 @@
               <span class="hide-menu">Home</span>
             </li>
             <li class="sidebar-item">
-              <a class="sidebar-link" href="/admin/dashboard" aria-expanded="false">
+              <a class="sidebar-link" href="/dashboard" aria-expanded="false">
                 <span>
                   <i class="ti ti-layout-dashboard"></i>
                 </span>
@@ -44,7 +44,7 @@
               <span class="hide-menu">Program Kerja</span>
             </li>
             <li class="sidebar-item">
-              <a class="sidebar-link" href="/admin/usulan_proker" aria-expanded="false">
+              <a class="sidebar-link" href="/usulan-proker" aria-expanded="false">
                 <span>
                   <i class="ti ti-alert-circle"></i>
                 </span>

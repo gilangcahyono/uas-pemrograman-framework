@@ -38,17 +38,12 @@ $routes->get('/', function () {
 $routes->get('/login', 'Login::index');
 $routes->post('/login', 'Login::login');
 
-$routes->get('/user/dashboard', 'User::dashboard');
-$routes->get('/user/pengajuan_proker', 'User::pengajuan_proker');
+$routes->get('/dashboard', 'User::dashboard');
+$routes->get('/pengajuan-proker', 'User::pengajuanProker');
+$routes->get('/usulan-proker', 'User::usulanProker');
 
-$routes->get('/admin/dashboard', 'Admin::dashboard');
-$routes->get('/admin/usulan_proker', 'Admin::usulan_proker');
-
-$routes->get('/validator/dashboard', 'Validator::dashboard');
-$routes->get('/validator/evaluasi_proker', 'Validator::evaluasi_proker');
-
-// $route->get('/proker', 'Proker::proker');
-// $route->post('/proker', 'Proker::proker');
+$routes->get('/proker', 'Proker::index');
+$routes->post('/proker', 'Proker::pengajuanProker');
 
 /*
  * --------------------------------------------------------------------
