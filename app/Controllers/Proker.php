@@ -39,9 +39,4 @@ class Proker extends BaseController
       'anggaran' => $anggaran,
     ]);
   }
-
-  // public function usulanProker()
-  // {
-  //   return view('usulan-proker');
-  // }
 }
